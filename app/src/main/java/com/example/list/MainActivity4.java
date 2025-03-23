@@ -11,15 +11,15 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity4 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main4);
 
-        ListView listView = findViewById(R.id.lista);
-        Log.d("MainActivity", "onCreate: Started.");
+        ListView listView = findViewById(R.id.lista4);
+        Log.d("MainActivity4", "onCreate: Started.");
 
         ArrayList<String> nomes = new ArrayList<>();
         nomes.add("Luiz Fernando");
@@ -29,12 +29,12 @@ public class MainActivity extends AppCompatActivity {
         nomes.add("Lucio Rabelo");
         nomes.add("Fernanda Lacerda");
 
-        ArrayAdapter adapter = new ArrayAdapter(this, R.layout.simple_list, nomes);
+        ArrayAdapter adapter = new ArrayAdapter(this, R.layout.simple_list4, nomes);
         listView.setAdapter(adapter);
     }
 
-    public void proxima_pagina(View v) {
-        Intent intent = new Intent(this, MainActivity2.class);
+    public void anterior_pagina(View v) {
+        Intent intent = new Intent(this, MainActivity3.class);
         startActivity(intent);
     }
 }
